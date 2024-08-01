@@ -1,0 +1,1118 @@
+@import url("templates/reserva.css");
+header {
+    background-size: cover;
+    font-family: sans-serif; /* Tipo de fuente */
+    margin: 0;
+    color: whitesmoke;
+    width: 100%;
+    text-align: center;
+    margin-bottom: .3rem;
+    margin-top: 0;
+    height: 100%;
+}
+.cerrarForm{
+    font-size: .8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: #25f10a8e;
+    width: 4rem;
+    border-radius: .2rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+.cerrarForm:hover{
+    background-color: rgba(255, 0, 0, 0.562);
+}
+
+.submit{
+    border-radius: .5rem;
+    margin-top: 1rem;
+    background-color: #030303c4;
+    color: white;
+}
+
+ul p{
+    display: none;
+}
+
+#seccion_final{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0%;
+}
+
+body {
+    background-image: linear-gradient(to right, black, rgb(40, 39, 37));
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+#nav{
+    top: 0;
+    background-image: linear-gradient(black, rgba(241, 112, 7, 0.849));
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+}
+
+#lista_menu{
+    display: flex;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+a, #log{
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+}
+
+.bienvenido{
+    font-size: 4rem;
+    text-shadow: .4rem .4rem .3rem rgb(0, 0, 0);
+    background-color: #030303;
+}
+
+#home h1{
+    margin-top: 0;
+}
+
+#enviar2{
+    background-color: #F8680C;
+    color: white;
+    font-weight: 900;
+    margin-top: 2rem;
+    margin-left: 23rem;
+    border: solid;
+    border-radius: 15px;
+    border-color: rgb(252, 252, 252);
+    box-shadow: .1rem .1rem .5rem orange;
+}
+
+#enviar2:hover {
+    background-color: white;
+    color: orange;
+    border: .2rem solid orange;
+}
+
+input, textarea{
+    border: solid;
+    border-color: rgb(108, 164, 234);
+    border-radius: 10px;
+}
+
+textarea{
+    width: 80%;
+    font-size: 15px;
+}
+
+
+nav a:hover{
+    text-shadow: .2rem .2rem .5rem white;
+}
+nav a:visited{
+    color: white;
+}
+
+p#promo{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+p#letras_chicas{
+    display: flex-block;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    background-color: rgb(12, 12, 12);
+}
+
+p#inscripciones{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#seminario{
+    text-align: center;
+    font-size: 65px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 100px;
+    margin-bottom: 2rem;
+}
+
+form{
+    width: 60vw;
+    height: 20vh;
+    padding: 2rem;
+    margin: auto;
+    margin-top: 0;
+
+}
+
+.h2_formulario{
+    width: 49vw;
+    background-color: #03030370;
+    border-radius: .5rem;
+    margin: auto;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+#formulario {
+    text-align: center;
+    align-content: center;
+}
+
+form h2{
+    background-image: none;
+}
+
+#contacto_form{
+    background-image: linear-gradient(rgba(12, 122, 247, 0.45),rgba(5, 7, 12, 0.45));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 70vw;
+    height: 55vw;
+    margin: auto;
+    align-content: center;
+    border-radius: 1rem;
+    margin-top: 5rem;
+    display:flex ;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.email_in{
+    margin-left: 5px;
+}
+input{
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.encabezado_imagen {
+    background-image: url(imagenes_logo/portada.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    animation-name: galery_portada;
+    animation-fill-mode:backwards;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes galery_portada{
+    0%{background-image: url(imagenes_logo/clase1.jpg);}
+    20%{background-image: url(imagenes_logo/clase3.jpg);}
+    40%{background-image: url(imagenes_logo/clase6.jpg);}
+    60%{background-image: url(imagenes_logo/clase7.jpg);}
+    80%{background-image: url(imagenes_logo/portada.png);}
+    100%{background-image: url(imagenes_logo/clase9.jpg);}
+}
+
+.mujeres{
+    width: 250px;
+    float: left;
+    margin-right: 10px;
+}
+/*
+.nota_espectador{
+    margin-right: 11px;
+}
+.nota_tot{
+    margin-right: 11px;
+}*/
+.chat_azul{
+    width: 5vw;
+    position: fixed;
+    right: 3rem;
+    bottom: 1rem;
+    z-index: 2;
+    opacity: .7;
+}
+#correo_oculto{
+    opacity: 0;
+}
+#chat_azul{
+    width: 4rem;
+}
+
+.chat_azul:hover{
+    transform: rotate(15deg);
+    border-radius: 3rem;
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.cuadro_texto{
+    width: 535px;
+    height: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.lema{
+    font-size: 2rem;
+}
+
+div.videos{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.info_eyal{
+    color: whitesmoke;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 35%;
+    background-color: rgb(187, 144, 64);
+}
+
+.info_eyal:hover{
+    color: orange;
+}
+
+
+
+h1 {color: #fdfbfa;
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.493), rgba(255, 136, 0, 0.767)); 
+    padding: 0.625rem; /* Añade espacio interno alrededor del texto del título */
+    text-align: center;
+    font-size: 2.25rem;
+    z-index: -1;
+}
+
+h2 {color: #fcfaf9;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 56px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.582), rgba(255, 115, 0, 0.966));
+    animation: entrarDesdeDerecha 1s ease-out forwards;
+    opacity: 0;
+    text-shadow: .4rem .4rem .2rem black;
+    z-index: -2;
+}
+
+@keyframes entrarDesdeDerecha {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+h2.que_es{
+    margin-top: 150px;
+}
+
+h3 {color: silver;
+    text-align: center;}
+
+.foto_imi {
+    display: flex;
+    margin-bottom: 3.125rem;
+}
+.tabla{
+    border-color: #F8680C;
+    padding: 5px;
+    margin-bottom: 70px;
+}
+
+.clase_eyal{
+    width: 250px;
+    float: right;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.contacto_p{
+    text-align: center;
+}
+
+#cartel_horarios{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 70px;
+}
+.foto_diploma {
+    text-align: center;
+    width: 225px;
+    float: left;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.foto_eyal {
+    width: 150px;
+    float: right;
+    align-items: center;
+    margin-left: 15px;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: auto;
+}
+
+a.chatea{
+    background-color: #d36f129f;
+    padding: 3rem;
+    margin: auto;
+    margin-left: 2rem;
+    box-shadow: .2rem .2rem .1rem rgba(253, 252, 252, 0.479);
+}
+.chatea:hover{
+    background-color: orangered;
+    text-shadow: .2rem .2rem .1rem rgba(10, 10, 10, 0.712);
+}
+
+.nuestras{
+    margin-top: 70px;
+}
+
+.siguenos{
+    text-align: center;
+    margin-top: 100px;
+    padding: 1rem;
+    background-image: linear-gradient(rgba(33, 107, 218, 0.479), rgba(3, 3, 3, 0.479));
+    margin-bottom: 0;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+.contact-container{
+    text-align: center;
+
+}
+
+#foto_volante{
+    width: 60%;
+}
+
+#linea_divisoria{
+    width: 80%;
+    color: #F8680C;
+    margin-top: 70px;
+}
+
+p, #about li {
+    text-align: justify;
+    font-family: sans-serif;;
+    line-height: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.25rem;
+    color: white;
+    width: 80vw;
+    margin: auto;
+}
+
+#direccion{
+    text-align: center;
+}
+.chat{
+    width: 50px;
+}
+#redes_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 0;
+}
+#redes_div a{
+    background-color: rgba(0, 128, 0, 0);
+}
+
+.mapa_1 {
+    margin-top:70px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 30vh;
+}
+
+
+
+.email{
+    color: whitesmoke;
+}
+link:hover{
+    color: aquamarine;
+}
+
+
+
+.fotos_redes{
+    width: 100px;
+}
+
+#curso_tiro{
+    width: 50%;
+}
+#tiro{
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+}
+
+#footer{
+    font-size: 100%;
+    background-color: #553;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+
+}
+
+#horarios{
+    width: 60%;
+    text-align: center;
+}
+
+/* PAGINA TIENDA*/
+
+.indumentaria_imagen{
+    width: 250px;
+    margin-top: 40px;
+}
+
+
+
+.indumentaria_desc{
+    text-align: center;
+    margin: auto;
+}
+.btn_compra{
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(rgb(230, 202, 89), rgb(74, 57, 26));
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+}
+button:hover{
+    color: #f8960c;
+}
+.foto_seminario{
+    width: 60%;
+}
+#seccion_venta{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+#header_tienda{
+    background-image: url(imagenes_logo/portada.png);
+    background-position: center;
+    height: 400px;
+}
+
+#seccion_gracias{
+    width: 500px;
+    margin: auto;
+    border: solid;
+    border-color: #F8680C;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+#redes{
+    margin: auto;
+}
+#redes:hover{
+    box-shadow: .5rem .5rem .5rem white;
+}
+#insta{
+    text-align: center;
+    margin-top: 50px;
+}
+#tienda{
+    margin: 0%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.lista_req{
+    margin: 1.5rem;
+}
+.lista_req::before{
+    content: "➡️    "
+}
+
+#lista_requisitos {
+    text-align: left;
+    margin: auto;
+    width: fit-content;
+}
+#requisitos{
+    background-color: #86580450;
+    padding: 1rem 0 1rem 0;
+}
+
+#titulo_curso{
+    margin: auto;
+    width: 700px;
+    background-color: #030303b2;
+    margin-bottom: 15px;
+    font-size: 21px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#volver{
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    border-radius: .2rem;
+    border:solid .2rem rgb(255, 166, 0);
+    background-color: white;
+    box-shadow: .2rem .2rem .2rem rgb(247, 247, 247);
+}
+
+.bienve{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#parrafo_curso{
+    width: fit-content;
+    margin: auto;
+    padding: 50px;
+    margin-top: 1.5rem;
+}
+
+
+#curso_form{
+    background-image: linear-gradient(rgba(5, 7, 12, 0.45),rgba(5, 7, 12, 0.45)),url(imagenes_logo/fondo_ladrillo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 70%;
+    height: 45rem;
+    margin: auto;
+    padding-top: 0;
+    padding-bottom: 70px;
+    margin-bottom: 2rem;
+}
+
+#about li{
+    left: 0;
+    font-size: 1.4rem;
+    text-align: left;
+    margin-left: 6rem;
+}
+#formu{
+    width: 25vw;
+    height: 20vw;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.438), rgba(0, 0, 255, 0.37));
+    display: none;
+    position: fixed;
+    top: 5rem;
+    left: 35vw;
+    z-index: 2;
+    animation: entradaForm 2s ease forwards; 
+    border-radius: .5rem;
+}
+@keyframes entradaForm{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 2;
+    }
+}
+
+.footer_curso{
+    background-color: #553;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+
+}
+
+
+
+.videos iframe:hover{
+    box-shadow: .5rem .5rem .5rem white;
+    transform: scale(1.05);
+}
+
+#log:hover{
+    cursor: pointer;
+}
+.videos iframe{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.404), rgba(255, 136, 0, 0.863));
+    padding: 10px;
+    margin-top: 5rem;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .5rem white;
+}
+#menu_hamburguesa{
+    display: none;
+}
+
+#message{
+    margin-bottom: 2rem;
+}
+#formulario_curso{
+    padding-top: 1rem;
+}
+
+#enviar3 {
+    border-radius: .2rem;
+    background-image: linear-gradient(black, orange, black);
+    color: white;
+    font-size: 1.3rem;
+    text-shadow: .2rem .2rem .1rem black;
+}
+
+#enviar3:hover {
+    box-shadow: .2rem .2rem .5rem white;
+}
+
+/* Aca empieza estilos de reserva*/
+#calendario-reservas {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    animation-delay: 0;
+    animation: entradaReserva 1.5s forwards;
+    display: none;
+}
+@keyframes entradaReserva{
+    from {
+        top: -100%;
+    }
+    to {
+        top: 3rem;
+    }
+}
+
+.calendario-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgb(7, 7, 7), rgba(43, 42, 42, 0.904));
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 1.5rem rgb(247, 245, 245);
+    position: absolute;
+    top: 3rem;
+    left: 20rem;
+    z-index: 3;
+}
+.titulo {
+    text-align: center;
+    color: #faf8f8;
+    background-image: none;
+    font-size: 2rem;
+}
+.dia {
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #da6b11;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+button:hover {
+    background-color: #45a049;
+    color: white;
+}
+button.reservado {
+    background-color: #f44336;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0rem;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.mensaje {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0303038e;
+    border-left: 6px solid #2196F3;
+}
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+.input-reserva {
+    width: 16vw;
+}
+.form-reserva {
+    height: 35vh;
+}
+
+@keyframes brilloIntermitente {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        opacity: .2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        opacity: .2;
+    }
+}
+
+.btn-reserva {
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(123, 255, 0));
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: .5rem 0 .5rem 0;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 2rem white;
+    text-shadow: .2rem .2rem .7rem white;
+    top: 3.5rem;
+    height: 4rem;
+    width: 4rem;
+    animation: brilloIntermitente 5s infinite;
+    z-index: 2;
+    font-size: 1rem;
+}
+
+.btn-cerrar-reserva {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.datos-res {
+    color: #030303;
+}
+
+.btn-datos-res {
+    margin-left: 3rem;
+}
+.alerta-reserva {
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+    width: fit-content;
+}
+@media screen and (max-width:991px){
+    #enviar2 {
+        margin-left: 9rem;
+    }
+    .btn-reserva {
+        top: 0;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .bienvenido {
+        font-size: 2rem;
+    }
+    .calendario-container {
+        position: fixed;
+        left: 0;
+        width: 90vw;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+    }
+
+
+    .input-reserva {
+        width: 100%;
+    }
+    #about li{
+        margin-left: 0;
+    }
+    .clase_eyal{
+        width: 50%;
+        margin-top: 0;
+    }
+    #h2_curso_form{
+        margin-top: 0;
+    }
+    #message{
+        width: 80vw;
+        margin-bottom: 2rem;
+    }
+    .formulario_curso{
+        position: absolute;
+        left: 2rem;
+        padding: 0;
+    }
+    #formulario_curso input{
+        width: 80vw;
+    }
+    #formulario input{
+        width: 78%;
+        margin-left: 2rem;
+    }
+    .h2_formulario{
+        width: 100%;
+        font-size: 2rem;
+    }
+    #correo{
+        margin-bottom: 1rem;
+    }
+    .footer_curso{
+        font-size: 70%;
+    }
+    #curso_form{
+        width: 100%;
+        height: 48rem;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    #parrafo_curso {
+        width: 70%;
+        margin-left: 0;
+        padding-left: .5rem;
+    }
+    ul p{
+        display: block;
+        background-color: #4df50aa6;
+        width: 8rem;
+        border-radius: .5rem;
+        padding-left: 4rem;
+        margin-left: 0;
+        text-align: left;
+        animation: menu .5s ease-out forwards;
+    }
+    @keyframes menu {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    #nav{
+        background-color: rgb(10, 4, 0);
+    }
+    footer{
+        width: 100vw;
+        font-size: 70%;
+    }
+
+    #menu_hamburguesa{
+        display: flex;
+        position: fixed;
+        left: 10rem;
+        margin-top: 2rem;
+        background-color: #f1740d56;
+        color: white;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: .5rem;
+        font-size: 2rem;
+        z-index: 2;
+    }
+
+    #lista_menu{
+        display: none;
+        font-size: 1rem;
+        gap: .5rem;
+        padding-top: 3rem;
+        animation: menu .5s  ease-out forwards;
+        background-color: #03030377;
+    }
+    body{
+        width: 100%;
+    }
+    p{
+        width: 90vw;
+        font-size: larger;
+        margin-left: .5rem;
+        margin-left: 1rem;
+    }
+    a, #log{
+        display: flex;
+        background-color: rgba(248, 126, 4, 0.582);
+        padding: 1rem;
+        width: 10rem;
+        border-radius: .5rem;
+        margin-bottom: .5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
+    }
+
+    #nav{
+        display: inline-block;
+        background-image: none;
+    }
+    
+    #imi{
+        width: 100%;
+    }
+    #foto_imi{
+        width: 100%;
+    }
+    #mapa{
+        margin: auto;
+        margin-left: 0;
+    }
+    .mapa_1{
+        width: 80vw;
+        margin-bottom: 3rem;
+    }
+    .horarios{
+        width: 150%;
+    }
+    #cartel_horarios{
+        width: 100%;
+    }
+    #horarios{
+        width: 100%;
+    }
+    #locacion{
+        width: 100%;
+    }
+
+    .contact-container{
+        margin-left: 2rem;
+    }
+
+    .videos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }    
+
+    #chat_azul{
+        width: 5rem;
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        opacity: 1;
+        z-index: 2;
+    }
+    a#chat_azul{
+        background-color: balck;
+    }
+    #guasap{
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .foto_seminario{
+        width: 100%;
+    }
+    #curso_tiro{
+        width: 100%;
+    }
+
+    #seccion_venta{
+        display:flex;
+        flex-direction: column;
+    }
+    .chatea{
+        margin: auto;
+        gap: 1rem;
+        padding: 0;
+    }
+    .nota_espectador{
+        margin-bottom: 20px;
+    }
+    .nota_tot{
+        margin-bottom: 20px;
+    }
+    .encabezado_imagen{
+        width: 100vw;
+        background-image: url(imagenes_logo/logo_ag_negro.png);
+    }
+    #formulario{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    #contacto_form{
+        width: 100%;
+        height: 37rem;
+    }
+    #formulario a{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    #formu{
+        width: 70vw;
+        height: 15rem;
+        left: 5rem;
+    }
+    .cerrarForm{
+        margin-left: 4.5rem;
+    }
+}
