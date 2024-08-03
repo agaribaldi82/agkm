@@ -501,17 +501,49 @@ link:hover{
 }
 
 /* PAGINA TIENDA*/
+#lista-productos {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 2rem;
+}
 
 .indumentaria_imagen{
     width: 250px;
     margin-top: 40px;
 }
 
+h2#carrito {
+    background-image: none; 
+    font-size: 2rem;
+    color: #030303;
+    text-shadow: none;
+}
+#lista-productos li {
+    border: 2px solid black;
+    padding: .5rem;
+}
 
+.div-carrito {
+    position: absolute;
+    background-color: white;
+    width: 40vw;
 
+    height: 30vw;
+    text-align: center;
+    border-radius: .2rem;
+    color: #030303;
+}
+.costo-total {
+    display: flex;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+}
 .indumentaria_desc{
     text-align: center;
     margin: auto;
+    margin-right: 2rem;
 }
 .btn_compra{
     padding: 15px;
@@ -860,6 +892,20 @@ form input {
     font-size: 1rem;
     text-align: center;
     width: fit-content;
+}
+#producto {
+    width: 2rem;
+}
+
+.div-prod {
+    display: flex;
+    margin: 0;
+}
+.div-prod-completo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
 }
 @media screen and (max-width:991px){
     #enviar2 {

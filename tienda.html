@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width=, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>AG KRAV MAGA -Tienda Online</title>
+    <script src="carrito2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 </head>
 <body id="body_tienda">
     <header id="header_tienda">
@@ -14,25 +16,29 @@
     <h1 id="tienda">Tienda Online</h1>
     <a href="index.html"><img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/FD7E14/return.png" alt="return"/></a>
     <section id="seccion_venta">
-        <div>
-            <img class="indumentaria_imagen" src="imagenes_logo/remera_frente_black.png" alt="" ><br>
-            <h3 class="indumentaria_desc">Producto: <span>Remera Oficial (Negra)</span></h3>
-            <h3 class="indumentaria_desc">Precio: <span>$850</span></h3><br>
-            <h3 class="indumentaria_desc">Cantidad: <span>1</span></h3><br>
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/remera_frente_black.png" alt="" >
+            <div class="div-prod"><h3 class="indumentaria_desc">Producto:</h3> <span class="product">Remera Oficial (Negra)</span></div>
+            <div class="div-prod"><h3 class="indumentaria_desc">Precio:</h3> <span class="costo">850</span></h3></div>
+            <h3 class="div-prod">Cantidad: <input type="number" id="producto" name="producto" min="1" step="1" value="1"></h3>
             <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
-            <script src="https://www.mercadopago.com.uy/integrations/v1/web-payment-checkout.js"
-                data-preference-id="33130760-922c81dd-6142-47f9-85f6-1c7455ace483" data-source="button">
-            </script>
-
-
-
-
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+        <div class="div-carrito">
+            <h2 id="carrito" class="carrito">
+                Carrito:
+            </h2>
+            <h3 id="vacio">Vacío</h3>
+            <ul class="lista-productos" id="lista-productos">
+            </ul>
+            <p class="costo-total"></p>
+            <button type="button" class="btn-comprar">Comprar</button>
         </div>
         <div>
             <img class="indumentaria_imagen" src="imagenes_logo/remera_blanca_frente.png" alt=""><br>
          <h3 class="indumentaria_desc">Producto: </h3><span>Remera Oficial (Blanca)</span>
             <h3 class="indumentaria_desc">Precio: </h3><span>$850</span><br>
-            <h3 class="indumentaria_desc">Cantidad: <span>1</span></h3><br>
+            <h3 class="indumentaria_desc">Cantidad: <input type="number" id="producto1" name="producto" min="1" step="1" value="1"></h3>
             <!--<button class="btn_compra" id="btn_compra2">Comprar</button>-->
             <script src="https://www.mercadopago.com.uy/integrations/v1/web-payment-checkout.js"
                 data-preference-id="33130760-1564dfd4-ac0f-4404-9700-da287a8bbd31" data-source="button">
@@ -44,9 +50,9 @@
         </div>
         <div>
             <img class="indumentaria_imagen" src="imagenes_logo/pantalon.png" alt=""><br>
-            <h3 class="indumentaria_desc" id="product-description">Producto: </h3><span>Pantalón Oficial</span><br>
-            <h3 class="indumentaria_desc" id="unit-price">Precio: </h3><span>$1650</span><br>
-            <h3 class="indumentaria_desc" id="quantity">Cantidad: <span>1</span></h3><br>
+            <h3 class="indumentaria_desc" id="product-description">Producto: </h3><span>Pantalón Oficial</span>
+            <h3 class="indumentaria_desc" id="unit-price">Precio: </h3><span>$1650</span>
+            <h3 class="indumentaria_desc" id="quantity">Cantidad: <input type="number" id="producto2" name="producto" min="1" step="1" value="1">
             <!--<button class="btn_compra" id="checkout-btn">Comprar</button>-->
             <script src="https://www.mercadopago.com.uy/integrations/v1/web-payment-checkout.js"
                 data-preference-id="33130760-d677c515-6ce4-4e13-b333-ee5c69992b2c" data-source="button">
@@ -57,9 +63,9 @@
 
         <div>
             <img class="indumentaria_imagen" src="imagenes_logo/remera_pantalon.png" alt=""><br>
-            <h3 class="indumentaria_desc" id="product-description">Producto: </h3><span>Promo - Remera + Pantalón</span><br>
+            <h3 class="indumentaria_desc" id="product-description">Producto: </h3><span>Promo - Remera + Pantalón</span>
             <h3 class="indumentaria_desc" id="unit-price">Precio: </h3><span>$2300</span><br>
-            <h3 class="indumentaria_desc" id="quantity">Cantidad: <span>1</span></h3><br>
+            <h3 class="indumentaria_desc" id="quantity">Cantidad: <input type="number" id="producto3" name="producto" min="1" step="1" value="1"></h3><br>
             <script src="https://www.mercadopago.com.uy/integrations/v1/web-payment-checkout.js"
                 data-preference-id="33130760-9e422101-75e8-49d3-be0f-b2b4fcd76976" data-source="button">
             </script>
