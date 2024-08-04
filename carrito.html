@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras AGKM</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .producto { border: 1px solid #ddd; padding: 10px; margin: 10px 0; }
+        #carrito { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Tienda AGKM</h1>
+    <div id="productos"></div>
+    <div id="carrito">
+        <h2>Carrito</h2>
+        <ul id="items-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+    </div>
+    <form id="formulario-compra">
+        <h2>Datos del Cliente</h2>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="apellido" placeholder="Apellido" required>
+        <input type="tel" id="telefono" placeholder="Teléfono" required>
+        <button type="submit">Comprar</button>
+    </form>
+
+    <script>
+        const productos = [
+            {id: 1, nombre: 'Remera Negra AGKM', precio: 850},
+            {id: 2, nombre: 'Remera Blanca AGKM', precio: 850},
+            {id: 3, nombre: 'Pantalón AGKM', precio: 1500},
+            {id: 4, nombre: 'Combo Pantalón y Remera', precio: 2250},
+            {id: 5, nombre: 'Canguro AGKM', precio: 1200}
+        ];
+
+        let carrito = [];
+
+        function mostrarProductos() {
+            const contenedor = document.getElementById('productos');
+            productos.forEach(producto => {
+                const div = document.createElement('div');
+                div.className = 'producto';
+                div.innerHTML = `
+                    <h3>${producto.nombre}</h3>
+                    <p>Precio: $${producto.precio}</p>
+                    <button onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
+                `;
+                contenedor.appendChild(div);
+            });
+        }
+
+        function agregarAlCarrito(id) {
+            const producto = productos.find(p => p.id === id);
+            const item = carrito.find(i => i.id === id);
+            if (item) {
+                item.cantidad++;
+            } else {
+                carrito.push({...producto, cantidad: 1});
+            }
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const lista = document.getElementById('items-carrito');
+            const total = document.getElementById('total');
+            lista.innerHTML = '';
+            let suma = 0;
+            carrito.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nombre} x ${item.cantidad} - $${item.precio * item.cantidad}`;
+                lista.appendChild(li);
+                suma += item.precio * item.cantidad;
+            });
+            total.textContent = suma;
+        }
+
+        document.getElementById('formulario-compra').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const telefono = document.getElementById('telefono').value;
+
+            const datos = {
+                nombre,
+                apellido,
+                telefono,
+                carrito: carrito.map(item => ({
+                    id: item.id,
+                    nombre: item.nombre,
+                    cantidad: item.cantidad,
+                    precio: item.precio
+                }))
+            };
+
+            fetch('carrito.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(datos)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Compra realizada con éxito');
+                    carrito = [];
+                    actualizarCarrito();
+                } else {
+                    alert('Error al procesar la compra');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al procesar la compra');
+            });
+        });
+
+        mostrarProductos();
+    </script>
+</body>
+</html>

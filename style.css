@@ -527,25 +527,29 @@ h2#carrito {
 .div-carrito {
     position: absolute;
     background-color: white;
-    width: 40vw;
-
-    height: 30vw;
+    width: 50%;
+    height: fit-content;
     text-align: center;
     border-radius: .2rem;
     color: #030303;
+    padding: 3rem;
+}
+.talle-contenedor {
+    display: flex;
 }
 .costo-total {
     display: flex;
     color: black;
     font-size: 1rem;
     text-align: center;
+    width: fit-content;
 }
 .indumentaria_desc{
     text-align: center;
     margin: auto;
     margin-right: 2rem;
 }
-.btn_compra{
+.btn-comprar{
     padding: 15px;
     margin-top: 15px;
     margin-bottom: 30px;
@@ -553,6 +557,7 @@ h2#carrito {
     color: white;
     font-size: 15px;
     font-weight: 900;
+    margin: auto;
 }
 button:hover{
     color: #f8960c;
