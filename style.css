@@ -523,7 +523,9 @@ h2#carrito {
     border: 2px solid black;
     padding: .5rem;
 }
-
+.cerrar-carrito {
+    cursor: pointer;
+}
 .div-carrito {
     position: absolute;
     background-color: white;

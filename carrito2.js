@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const costo_producto = parseFloat(costo.textContent.replace('$', ''));
         const talle_seleccionado = talle.value;
 
+        const carrito = document.querySelector(".div-carrito").style.display = "block"
+
         if (!isNaN(cantidad_seleccionada) && !isNaN(costo_producto)) {
             const precio_total = costo_producto * cantidad_seleccionada;
             const producto_agregado = document.createElement("li");
@@ -66,3 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function cerrarCarrito() {
+    document.querySelector(".div-carrito").style.display = "none"
+}
