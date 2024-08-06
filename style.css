@@ -501,7 +501,7 @@ link:hover{
 }
 
 /* PAGINA TIENDA*/
-#lista-productos {
+.lista-productos {
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -513,21 +513,27 @@ link:hover{
     margin-top: 40px;
 }
 
-h2#carrito {
+h2.carrito {
     background-image: none; 
     font-size: 2rem;
     color: #030303;
     text-shadow: none;
 }
-#lista-productos li {
+.lista-productos li {
     border: 2px solid black;
     padding: .5rem;
 }
 .cerrar-carrito {
     cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
 }
 .div-carrito {
+    display: grid;
     position: absolute;
+    top: 35rem;
+    left: 15rem;
     background-color: white;
     width: 50%;
     height: fit-content;
@@ -535,10 +541,65 @@ h2#carrito {
     border-radius: .2rem;
     color: #030303;
     padding: 3rem;
+    display: none;
+}
+.div-carro-volver {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem 0 3rem;
+    align-content: center;
+}
+
+#numero-carrito {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #34fd026e;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.carro-imagen {
+    width: fit-content;
+    display: flex;
+    text-align: end;
+    gap: 20px; /* Ajusta este valor según necesites */
+    margin-right: 5rem;
+}
+.carrito-img {
+    cursor: pointer;
+}
+
+/* Estilo para el <li> */
+.lista-productos li {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    margin-bottom: 10px; /* Espaciado entre elementos de lista */
+}
+
+/* Estilo para el contenedor del contenido */
+.lista-productos li .contenido {
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+/* Estilo para el botón de eliminar */
+.lista-productos li img {
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+    cursor: pointer;   /* Cambia el cursor cuando se pasa por encima */
+}
+.carrito-img:hover {
+    transform: scale(1.1);
+    transform: rotate(10deg);
+}
+.volver-img:hover {
+    transform: scale(1.1);
+}
+.titulo-carro {
+    display: flex;
 }
 .talle-contenedor {
     display: flex;
 }
+
 .costo-total {
     display: flex;
     color: black;
@@ -549,7 +610,7 @@ h2#carrito {
 .indumentaria_desc{
     text-align: center;
     margin: auto;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 .btn-comprar{
     padding: 15px;
@@ -561,6 +622,7 @@ h2#carrito {
     font-weight: 900;
     margin: auto;
 }
+
 button:hover{
     color: #f8960c;
 }
@@ -569,8 +631,9 @@ button:hover{
 }
 #seccion_venta{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 100px;
+    gap: 3rem;
 }
 #header_tienda{
     background-image: url(imagenes_logo/portada.png);
@@ -900,8 +963,12 @@ form input {
     text-align: center;
     width: fit-content;
 }
-#producto {
+.producto {
     width: 2rem;
+    margin-left: 1rem;
+}
+.talle {
+    margin-left: 1rem;
 }
 
 .div-prod {
@@ -912,7 +979,17 @@ form input {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 2rem;
+    gap: 1rem;
+    background-color: #2195f331;
+    padding: 0 1rem 1rem 1rem;
+}
+
+#footer-tienda {
+    width: 99%;
+    position: absolute;
+    top: 116rem;
+    padding: .5rem;
+    background-color: rgba(255, 94, 0, 0.39);
 }
 @media screen and (max-width:991px){
     #enviar2 {

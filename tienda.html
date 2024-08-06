@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>AG KRAV MAGA -Tienda Online</title>
     <script src="carrito2.js"></script>
@@ -11,15 +11,24 @@
 <body id="body_tienda">
     <header id="header_tienda">
     </header>
+    
     <h1 id="tienda">Tienda Online</h1>
-    <a href="index.html"><img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/FD7E14/return.png" alt="return"/></a>
+    <div class="div-carro-volver">
+        <a class="volver-img" href="index.html"><img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/FD7E14/return.png" alt="return"/></a>
+        <div class="carro-imagen">
+            <img class="carrito-img" onclick="abrirCarro()" width="100" height="100" src="https://img.icons8.com/matisse/100/shopping-cart.png" alt="shopping-cart"/>
+            <p id="numero-carrito">0</p>
+        </div>
+    </div>
     <section id="seccion_venta">
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/remera_frente_black.png" alt="" >
-            <div class="div-prod"><h3 class="indumentaria_desc">Producto:</h3> <span class="product">Remera Oficial (Negra)</span></div>
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Remera Oficial (Negra)</span>
+            </div>
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
-                <select id="talle" name="talle">
+                <select class="talle" name="talle">
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
@@ -27,61 +36,176 @@
                 <option value="XXL">XXL</option>
                 </select>
             </div>
-            <div class="div-prod"><h3 class="indumentaria_desc">Precio:</h3> <span class="costo">$850</span></h3></div>
-            <h3 class="div-prod">Cantidad: <input type="number" id="producto" name="producto" min="1" step="1" value="1"></h3>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$800</span></div>
             <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
-        <div class="div-carrito">
-            <img onclick="cerrarCarrito()" class="cerrar-carrito" width="48" height="48" src="https://img.icons8.com/color/48/close-window.png" alt="close-window"/>
-            <h2 id="carrito" class="carrito">
-                Carrito:
-            </h2>
-            <h3 id="vacio">Vacío</h3>
-            <ul class="lista-productos" id="lista-productos">
-            </ul>
-            <p class="costo-total"></p>
-            <button type="button" class="btn-comprar">Comprar</button>
-        </div>
-        <div>
-            <img class="indumentaria_imagen" src="imagenes_logo/remera_blanca_frente.png" alt=""><br>
-         <h3 class="indumentaria_desc">Producto: </h3><span>Remera Oficial (Blanca)</span>
-            <h3 class="indumentaria_desc">Precio: </h3><span>$850</span><br>
-            <h3 class="indumentaria_desc">Cantidad: <input type="number" id="producto1" name="producto" min="1" step="1" value="1"></h3>
+        
+        
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/remera_blanca_frente.png" alt="">
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto: </label><span class="product">Remera Oficial (Blanca)</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$800</span></div>
+            
             <!--<button class="btn_compra" id="btn_compra2">Comprar</button>-->
-            <script src="https://www.mercadopago.com.uy/integrations/v1/web-payment-checkout.js"
-                data-preference-id="33130760-1564dfd4-ac0f-4404-9700-da287a8bbd31" data-source="button">
-            </script>
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
-        <div>
-            <img class="indumentaria_imagen" src="imagenes_logo/pantalon.png" alt=""><br>
-            <h3 class="indumentaria_desc" id="product-description">Producto: </h3><span>Pantalón Oficial</span>
-            <h3 class="indumentaria_desc" id="unit-price">Precio: </h3><span>$1650</span>
-            <h3 class="indumentaria_desc" id="quantity">Cantidad: <input type="number" id="producto2" name="producto" min="1" step="1" value="1">
+        
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/pantalon.png" alt="">
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto: </label><span class="product">Pantalón Oficial</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$1000</span></div>
             <!--<button class="btn_compra" id="checkout-btn">Comprar</button>-->
-            <script src="https://www.mercadopago.com.uy/integrations/v1/web-payment-checkout.js"
-                data-preference-id="33130760-d677c515-6ce4-4e13-b333-ee5c69992b2c" data-source="button">
-            </script>
-
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
 
         </div>
 
-        <div>
-            <img class="indumentaria_imagen" src="imagenes_logo/remera_pantalon.png" alt=""><br>
-            <h3 class="indumentaria_desc" id="product-description">Producto: </h3><span>Promo - Remera + Pantalón</span>
-            <h3 class="indumentaria_desc" id="unit-price">Precio: </h3><span>$2300</span><br>
-            <h3 class="indumentaria_desc" id="quantity">Cantidad: <input type="number" id="producto3" name="producto" min="1" step="1" value="1"></h3><br>
-            <script src="https://www.mercadopago.com.uy/integrations/v1/web-payment-checkout.js"
-                data-preference-id="33130760-9e422101-75e8-49d3-be0f-b2b4fcd76976" data-source="button">
-            </script>
-
-
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/remera_pantalon.png" alt="">
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto: </label><span class="product">Promo - Remera + Pantalón</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span>$1700</span></div>
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/canguro.png" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Canguro</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1200</span></div>
+            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/gorro_lana.png" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Gorro de lana</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$300</span></div>
+            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/gorro_lana_verde.png" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Gorro de lana - Verde</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$300</span></div>
+            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+        
     </section>
-    <footer>
+    
+    
+    
+    <div class="div-carrito">
+        <img onclick="cerrarCarrito()" class="cerrar-carrito" width="48" height="48" src="https://img.icons8.com/color/48/close-window.png" alt="close-window"/>
+        <h2 class="carrito">
+            Carrito:
+        </h2>
+        <h3 id="vacio">Vacío</h3>
+        <ul class="lista-productos" class="lista-productos">
+        </ul>
+        <p class="costo-total"></p>
+        <button type="button" class="btn-comprar">Comprar</button>
+    </div>
+
+
+        
+    <footer id="footer-tienda">
         <span>
             &copy; 2024 AG Krav Maga - Montevideo, Uruguay. Todos los derechos reservados. 
         </span>
     </footer>
 </body>
 </html>
+
+<!--
+            let imagen = document.createElement('img')
+            imagen.src = "https://img.icons8.com/plasticine/100/trash--v1.png"
+            imagen.width = 50; // Ancho de la imagen
+            imagen.height = 50; // Alto de la imagen
+            imagen.style.position = "absolute"
+            imagen.style.top = "48%"
+            imagen.style.right = "10%"
+-->
