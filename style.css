@@ -534,7 +534,7 @@ h2.carrito {
     position: absolute;
     top: 35rem;
     left: 15rem;
-    background-color: white;
+    background-color: rgba(252, 248, 247, 0.89);
     width: 50%;
     height: fit-content;
     text-align: center;
@@ -549,7 +549,27 @@ h2.carrito {
     padding: 0 3rem 0 3rem;
     align-content: center;
 }
-
+.datos-h3 {
+    font-size: 1.5rem;
+    color: #030303;
+}
+.formulario-carro {
+    position: absolute;
+    top: 40rem;
+    left: 35%;
+    background-color: white;
+    width: 23rem;
+    height: 28rem;
+    border-radius: .5rem;
+    display: none;
+}
+.formulario-carro form {
+    width: fit-content;
+}
+.formulario-carro form button {
+    margin: auto;
+    margin-top: 2rem;
+}
 #numero-carrito {
     width: 2.5rem;
     height: 2.5rem;
@@ -612,16 +632,7 @@ h2.carrito {
     margin: auto;
     margin-right: 1rem;
 }
-.btn-comprar{
-    padding: 15px;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    background-image: linear-gradient(rgb(230, 202, 89), rgb(74, 57, 26));
-    color: white;
-    font-size: 15px;
-    font-weight: 900;
-    margin: auto;
-}
+
 
 button:hover{
     color: #f8960c;
@@ -968,7 +979,7 @@ form input {
     margin-left: 1rem;
 }
 .talle {
-    margin-left: 1rem;
+    margin-left: 2.7rem;
 }
 
 .div-prod {
@@ -990,6 +1001,27 @@ form input {
     top: 116rem;
     padding: .5rem;
     background-color: rgba(255, 94, 0, 0.39);
+}
+.botones-carrito {
+    display: flex;
+    justify-content: center;
+}
+
+.vaciar:hover {
+    background-color: red;
+}
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.lista-productos li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 @media screen and (max-width:991px){
     #enviar2 {
