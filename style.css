@@ -518,6 +518,7 @@ h2.carrito {
     font-size: 2rem;
     color: #030303;
     text-shadow: none;
+    margin-top: 0;
 }
 .lista-productos li {
     border: 2px solid black;
@@ -530,55 +531,71 @@ h2.carrito {
     left: 1rem;
 }
 .div-carrito {
-    display: grid;
-    position: absolute;
-    top: 35rem;
+    position: fixed;
+    top: .5rem;
     left: 15rem;
     background-color: rgba(252, 248, 247, 0.89);
     width: 50%;
-    height: fit-content;
+    height: 80%;
     text-align: center;
     border-radius: .2rem;
     color: #030303;
     padding: 3rem;
     display: none;
+    overflow: scroll;
 }
 .div-carro-volver {
     display: flex;
     justify-content: space-between;
     padding: 0 3rem 0 3rem;
     align-content: center;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 .datos-h3 {
     font-size: 1.5rem;
     color: #030303;
 }
 .formulario-carro {
-    position: absolute;
-    top: 40rem;
+    position: fixed;
+    top: 4rem;
     left: 35%;
     background-color: white;
     width: 23rem;
-    height: 28rem;
+    height: 26rem;
     border-radius: .5rem;
     display: none;
+
+}
+.formulario-carro #cerrar-form {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    
 }
 .formulario-carro form {
     width: fit-content;
+    padding: 0;
 }
 .formulario-carro form button {
     margin: auto;
     margin-top: 2rem;
 }
 #numero-carrito {
+    position: fixed;
+    margin-left: 5rem;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #34fd026e;
+    background-color: #d13f05f5;
     border-radius: 50%;
     text-align: center;
+    font-weight: 700;
 }
 
 .carro-imagen {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
     width: fit-content;
     display: flex;
     text-align: end;
@@ -675,7 +692,7 @@ button:hover{
 #tienda{
     margin: 0%;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 1rem;
 }
 
 .lista_req{
@@ -706,12 +723,7 @@ button:hover{
 }
 
 #volver{
-    margin-top: 2rem;
-    font-size: 1.1rem;
-    border-radius: .2rem;
-    border:solid .2rem rgb(255, 166, 0);
-    background-color: white;
-    box-shadow: .2rem .2rem .2rem rgb(247, 247, 247);
+    margin-bottom: 4rem;
 }
 
 .bienve{
@@ -996,9 +1008,8 @@ form input {
 }
 
 #footer-tienda {
-    width: 99%;
-    position: absolute;
-    top: 116rem;
+    width: 100%;
+    position: relative;
     padding: .5rem;
     background-color: rgba(255, 94, 0, 0.39);
 }
@@ -1023,7 +1034,32 @@ form input {
     align-items: center;
     margin-bottom: 10px;
 }
+
+#volver a .volver-img {
+    background-color: #45a049;
+}
 @media screen and (max-width:991px){
+    .div-carrito {
+        left: 0;
+        width: fit-content;
+    }
+
+    .lista-productos {
+        width: fit-content;
+        padding: 0;
+    }
+    .formulario-carro {
+        left: 0;
+    }
+    .div-prod-completo {
+        align-items: center;
+    }
+
+    #footer-tienda {
+        width: fit-content;
+        position: relative;
+        margin-top: 0;
+    }
     #enviar2 {
         margin-left: 9rem;
     }
@@ -1131,7 +1167,7 @@ form input {
     #menu_hamburguesa{
         display: flex;
         position: fixed;
-        left: 10rem;
+        left: 50%;
         margin-top: 2rem;
         background-color: #f1740d56;
         color: white;
@@ -1152,6 +1188,7 @@ form input {
         padding-top: 3rem;
         animation: menu .5s  ease-out forwards;
         background-color: #03030377;
+        right: 2rem;
     }
     body{
         width: 100%;
@@ -1162,7 +1199,7 @@ form input {
         margin-left: .5rem;
         margin-left: 1rem;
     }
-    a, #log{
+    #nav a, #log{
         display: flex;
         background-color: rgba(248, 126, 4, 0.582);
         padding: 1rem;
@@ -1176,6 +1213,7 @@ form input {
     #nav{
         display: inline-block;
         background-image: none;
+        padding-right: 1rem;
     }
     
     #imi{
