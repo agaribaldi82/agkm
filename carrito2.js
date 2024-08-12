@@ -106,37 +106,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const telefono = document.getElementById('telefono').value;
         const email = document.getElementById('email').value;
 
+        console.log('Contenido de listaProductos:', listaProductos.innerHTML); // Depuración
+
         // Obtener los productos del carrito
-        const productosCarrito = Array.from(listaProductos.children).map(item => {
-            const nombreProducto = item.querySelector('.product')?.textContent || item.textContent.split('\n')[0] || 'Producto sin nombre';
-            const cantidad = item.textContent.match(/Cantidad: (\d+)/) ? item.textContent.match(/Cantidad: (\d+)/)[1] : 'N/A';
-            const precio = item.textContent.match(/Precio: \$(\d+(\.\d{1,2})?)/) ? item.textContent.match(/Precio: \$(\d+(\.\d{1,2})?)/)[1] : 'N/A';
-            return `${nombreProducto} - Cantidad: ${cantidad} - Precio: $${precio}`;
-        }).join('\n');
+        const productosCarrito = Array.from(listaProductos.children)
+            .filter(item => item.tagName === 'li') // Asegurarse de que solo procesamos elementos LI
+            .map(item => {
+                console.log('Item del carrito (HTML):', item.outerHTML); // Depuración
+                console.log('Item del carrito (texto):', item.textContent); // Depuración
 
-        console.log('Productos en carrito:', productosCarrito); // Depuración
+                // Extraer la información relevante
+                const textoCompleto = item.textContent.trim();
+                const [producto, talle, cantidad, precio] = textoCompleto.split('\n').map(line => line.trim());
 
-        const nuevoTotal = total.toFixed(2);
+                const infoProducto = `${producto} - ${talle} - ${cantidad} - ${precio}`;
+                console.log('Información del producto:', infoProducto); // Depuración
+                return infoProducto;
+            });
 
-        console.log('Nuevo total:', nuevoTotal); // Depuración
+        console.log('Productos capturados:', productosCarrito); // Depuración
 
-        // ... (resto del código sin cambios)
+        // Calcular el total
+        const nuevoTotal = parseFloat(costoTotal.textContent.replace('Total: $', ''));
 
         // Preparar el contenido del email
         const contenidoEmail = {
             to_name: "Adrian", // Cambia esto según sea necesario
             from_name: `${nombre} ${apellido}`,
             message: `
-Nuevo pedido de: ${nombre} ${apellido}
-Teléfono: ${telefono}
-Email: ${email}
+                    Nuevo pedido de: ${nombre} ${apellido}
+                    Teléfono: ${telefono}
+                    Email: ${email}
 
-Productos:
-${productosCarrito}
+                    Productos:
+                    ${productosCarrito.join('\n')}
 
-Total: $${nuevoTotal}
-            `.trim()
-        };
+                    Total: $${nuevoTotal.toFixed(2)}
+                                `.trim()
+                            };
 
         console.log('Contenido del email:', contenidoEmail); // Depuración
 
