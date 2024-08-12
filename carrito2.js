@@ -18,6 +18,100 @@ document.addEventListener('DOMContentLoaded', () => {
     let total = 0;
     let numeroCarro = 0;
 
+    formularioPedido.addEventListener('submit', async (e) => {
+        e.preventDefault();
+    
+        const nombre = document.getElementById('nombre').value.trim();
+        const apellido = document.getElementById('apellido').value.trim();
+        const telefono = document.getElementById('telefono').value.trim();
+        const email = document.getElementById('email').value.trim();
+        
+        // Validar campos
+        if (!nombre || !apellido || !telefono || !email) {
+            document.getElementById('mensaje-formulario').textContent = "Por favor, completa todos los campos.";
+            return;
+        }
+    
+        // Verificar que hay productos en listaProductos
+        if (listaProductos.children.length === 0) {
+            document.getElementById('mensaje-formulario').textContent = "El carrito está vacío. Agrega productos antes de enviar.";
+            return;
+        }
+    
+        // Extraer los productos del carrito
+        const productosCarrito = Array.from(listaProductos.children)
+            .filter(item => item.tagName === 'LI')
+            .map(item => {
+                const textoCompleto = item.innerText.trim();
+    
+                // Dividir el texto en líneas y eliminar líneas vacías
+                const lines = textoCompleto.split('\n').map(line => line.trim()).filter(line => line);
+    
+                // Inicializar variables para datos
+                let producto = 'Producto desconocido';
+                let talle = 'No especificado';
+                let cantidad = 'No especificado';
+                let precio = 'No especificado';
+    
+                // Recorrer las líneas para extraer datos
+                lines.forEach(line => {
+                    if (line.startsWith('Talle:')) {
+                        talle = line.replace('Talle: ', '');
+                    } else if (line.startsWith('Cantidad:')) {
+                        cantidad = line.replace('Cantidad: ', '');
+                    } else if (line.startsWith('Precio:')) {
+                        precio = line.replace('Precio: $', '');
+                    } else {
+                        producto = line;
+                    }
+                });
+    
+                // Formatear el producto
+                return `${producto} - Talle: ${talle} - Cantidad: ${cantidad} - Precio: $${precio}`;
+            });
+    
+        // Calcular el total
+        const totalTexto = costoTotal.textContent.replace('Total: $', '').trim();
+        const nuevoTotal = parseFloat(totalTexto);
+    
+        if (isNaN(nuevoTotal)) {
+            document.getElementById('mensaje-formulario').textContent = "Error al calcular el total. Por favor, intenta de nuevo.";
+            return;
+        }
+    
+        // Preparar el contenido del email
+        const contenidoEmail = {
+            to_name: "Adrian",
+            from_name: `${nombre} ${apellido}`,
+            message: `
+                Nueva compra realizada por ${nombre} ${apellido}:
+    
+                Teléfono: ${telefono}
+                Email: ${email}
+    
+                Productos:
+                ${productosCarrito.join('\n \n')}
+    
+                Total: $${nuevoTotal.toFixed(2)}
+            `.trim()
+        };
+    
+        // Enviar el email usando EmailJS
+        emailjs.send('service_z20cmq6', 'template_v4j0raz', contenidoEmail)
+            .then(response => {
+                Swal.fire({
+                    title: "¡Felicidades!",
+                    text: "Sigue las instrucciones",
+                    icon: "success"
+                });
+                vaciarCarrito();
+                abrirForm.style.display = "none";
+            })
+            .catch(error => {
+                console.error('Error al enviar el pedido:', error);
+                document.getElementById('mensaje-formulario').textContent = "Error al enviar el pedido. Por favor, intenta de nuevo.";
+            });
+    });
     
 
     const actualizarNumeroCarro = () => {
@@ -98,71 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     vaciarCarro.addEventListener("click", vaciarCarrito);
 
-    formularioPedido.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const nombre = document.getElementById('nombre').value;
-        const apellido = document.getElementById('apellido').value;
-        const telefono = document.getElementById('telefono').value;
-        const email = document.getElementById('email').value;
-
-        console.log('Contenido de listaProductos:', listaProductos.innerHTML); // Depuración
-
-        // Obtener los productos del carrito
-        const productosCarrito = Array.from(listaProductos.children)
-            .filter(item => item.tagName === 'li') // Asegurarse de que solo procesamos elementos LI
-            .map(item => {
-                console.log('Item del carrito (HTML):', item.outerHTML); // Depuración
-                console.log('Item del carrito (texto):', item.textContent); // Depuración
-
-                // Extraer la información relevante
-                const textoCompleto = item.textContent.trim();
-                const [producto, talle, cantidad, precio] = textoCompleto.split('\n').map(line => line.trim());
-
-                const infoProducto = `${producto} - ${talle} - ${cantidad} - ${precio}`;
-                console.log('Información del producto:', infoProducto); // Depuración
-                return infoProducto;
-            });
-
-        console.log('Productos capturados:', productosCarrito); // Depuración
-
-        // Calcular el total
-        const nuevoTotal = parseFloat(costoTotal.textContent.replace('Total: $', ''));
-
-        // Preparar el contenido del email
-        const contenidoEmail = {
-            to_name: "Adrian", // Cambia esto según sea necesario
-            from_name: `${nombre} ${apellido}`,
-            message: `
-                    Nuevo pedido de: ${nombre} ${apellido}
-                    Teléfono: ${telefono}
-                    Email: ${email}
-
-                    Productos:
-                    ${productosCarrito.join('\n')}
-
-                    Total: $${nuevoTotal.toFixed(2)}
-                                `.trim()
-                            };
-
-        console.log('Contenido del email:', contenidoEmail); // Depuración
-
-        // Enviar el email usando EmailJS
-        emailjs.send('service_z20cmq6', 'template_v4j0raz', contenidoEmail)
-            .then(function(response) {
-                console.log('SUCCESS!', response.status, response.text);
-                Swal.fire({
-                    title: "¡Felicidades!",
-                    text: "Sigue las instrucciones",
-                    icon: "success"
-                });
-                vaciarCarrito();  // Vaciar el carrito después de enviar el pedido
-                abrirForm.style.display = "none";
-            }, function(error) {
-                console.log('FAILED...', error);
-                document.getElementById('mensaje-formulario').textContent = "Error al enviar el pedido. Por favor, intenta de nuevo.";
-            });
-    });
+    
 
     const actualizarTotal = () => {
         if (total > 0) {
@@ -177,10 +207,6 @@ document.addEventListener('DOMContentLoaded', () => {
     comprar.addEventListener("click", () => {
         if (total > 0) {
             abrirForm.style.display = "block";
-
-            while (listaProductos.firstChild) {
-                listaProductos.removeChild(listaProductos.firstChild);
-            }
             document.getElementById("vacio").innerHTML = "No hay productos en el carrito";
             total = 0;
             numeroCarro = 0;
