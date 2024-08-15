@@ -1035,6 +1035,11 @@ form input {
     margin-bottom: 10px;
 }
 
+.swal2-title {
+    background-image: none;
+    z-index: 2;
+    text-shadow: none;
+}
 #volver a .volver-img {
     background-color: #45a049;
 }

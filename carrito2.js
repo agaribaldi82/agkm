@@ -43,33 +43,23 @@ document.addEventListener('DOMContentLoaded', () => {
             .filter(item => item.tagName === 'LI')
             .map(item => {
                 const textoCompleto = item.innerText.trim();
-    
-                // Dividir el texto en líneas y eliminar líneas vacías
                 const lines = textoCompleto.split('\n').map(line => line.trim()).filter(line => line);
-    
-                // Inicializar variables para datos
-                let producto = 'Producto desconocido';
-                let talle = 'No especificado';
-                let cantidad = 'No especificado';
-                let precio = 'No especificado';
-    
-                // Recorrer las líneas para extraer datos
-                lines.forEach(line => {
-                    if (line.startsWith('Talle:')) {
-                        talle = line.replace('Talle: ', '');
-                    } else if (line.startsWith('Cantidad:')) {
-                        cantidad = line.replace('Cantidad: ', '');
-                    } else if (line.startsWith('Precio:')) {
-                        precio = line.replace('Precio: $', '');
-                    } else {
-                        producto = line;
-                    }
-                });
-    
-                // Formatear el producto
-                return `${producto} - Talle: ${talle} - Cantidad: ${cantidad} - Precio: $${precio}`;
+
+                const producto = lines[0]; // La primera línea es el nombre del producto
+                const talle = lines.find(line => line.startsWith('Talle:'))?.replace('Talle: ', '');
+                const cantidad = lines.find(line => line.startsWith('Cantidad:'))?.replace('Cantidad: ', '');
+                const precio = lines.find(line => line.startsWith('Precio:'))?.replace('Precio: $', '');
+
+                // Formatear el producto solo con las líneas que tienen valor
+                let productoFormateado = producto;
+                if (talle) productoFormateado += `\nTalle: ${talle}\n\n`;
+                if (cantidad) productoFormateado += `\nCantidad: ${cantidad}\n\n`;
+                if (precio) productoFormateado += `\nPrecio: $${precio}`;
+
+                return productoFormateado;
             });
-    
+            const productosFormateados = productosCarrito.join('\n\n');
+
         // Calcular el total
         const totalTexto = costoTotal.textContent.replace('Total: $', '').trim();
         const nuevoTotal = parseFloat(totalTexto);
@@ -84,15 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
             to_name: "Adrian",
             from_name: `${nombre} ${apellido}`,
             message: `
-                Nueva compra realizada por ${nombre} ${apellido}:
-    
-                Teléfono: ${telefono}
-                Email: ${email}
-    
-                Productos:
-                ${productosCarrito.join('\n \n')}
-    
-                Total: $${nuevoTotal.toFixed(2)}
+        Nombre: ${nombre} ${apellido}:
+        Teléfono: ${telefono}
+        Email: ${email}
+        
+        Productos:
+        ${productosFormateados}
+        
+        Total: $${nuevoTotal.toFixed(2)}
             `.trim()
         };
     
@@ -100,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
         emailjs.send('service_z20cmq6', 'template_v4j0raz', contenidoEmail)
             .then(response => {
                 Swal.fire({
-                    title: "¡Felicidades!",
-                    text: "Sigue las instrucciones",
+                    title: `Gracias por tu compra ${nombre}!`,
+                    text: "Acabo de enviarte un email para que finalices tu compra.",
                     icon: "success"
                 });
                 vaciarCarrito();
