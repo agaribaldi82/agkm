@@ -81,7 +81,7 @@ body{
 }
 
 a:hover{
-    color: white;
+    box-shadow: .2rem .2rem .5rem white;
 }
 .light-box{
     position: fixed;
