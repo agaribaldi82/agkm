@@ -84,7 +84,60 @@ document.addEventListener('DOMContentLoaded', () => {
         Total: $${nuevoTotal.toFixed(2)}
             `.trim()
         };
-    
+        const datosParaDB = {
+            nombre,
+            apellido,
+            telefono,
+            email,
+            productos: JSON.stringify(productosCarrito),
+            total: nuevoTotal
+        };
+
+        try {
+            // Enviar email usando EmailJS
+            const emailResponse = await emailjs.send('service_z20cmq6', 'template_v4j0raz', contenidoEmail);
+            console.log('Email enviado con éxito:', emailResponse);
+        
+            // Guardar en la base de datos
+            const dbResponse = await fetch('/back.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(datosParaDB)
+            });
+        
+            if (!dbResponse.ok) {
+                const errorText = await dbResponse.text();
+                throw new Error(`HTTP error! status: ${dbResponse.status}, message: ${errorText}`);
+            }
+        
+            const dbResult = await dbResponse.json();
+            console.log('Datos guardados en la base de datos:', dbResult);
+        
+            Swal.fire({
+                title: `Gracias por tu compra ${nombre}!`,
+                text: "Tu pedido ha sido registrado y se ha enviado un email de confirmación.",
+                icon: "success"
+            });
+            vaciarCarrito();
+            abrirForm.style.display = "none";
+        } catch (error) {
+            console.error('Error al procesar el pedido:', error);
+            let errorMessage = "Hubo un problema al procesar tu pedido. ";
+            if (error.message.includes('404')) {
+                errorMessage += "No se pudo encontrar el script para guardar los datos. Por favor, contacta al administrador del sitio.";
+            } else {
+                errorMessage += "Por favor, intenta de nuevo más tarde.";
+            }
+            Swal.fire({
+                title: "Error",
+                text: errorMessage,
+                icon: "error"
+            });
+        }
+ 
+
         // Enviar el email usando EmailJS
         emailjs.send('service_z20cmq6', 'template_v4j0raz', contenidoEmail)
             .then(response => {

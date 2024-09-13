@@ -1,4 +1,6 @@
 <?php
+
+$conex = mysqli_connect("localhost", "u540045792_agaribaldi", "Bruno2906-", "u540045792_socios");
 // Configuración de la base de datos
 $host = 'localhost';
 $db   = 'u540045792_socios';
@@ -38,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nuevoTotal = $data['nuevoTotal'] ?? 0;
 
     // Preparar la consulta SQL
-    $sql = "INSERT INTO indumentaria (nombre, apellido, telefono, email, productos, total) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO pedidos (nombre, apellido, telefono, email, productos, total) VALUES (?, ?, ?, ?, ?, ?)";
 
     try {
         $stmt = $pdo->prepare($sql);
