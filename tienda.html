@@ -118,6 +118,8 @@
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
+        
+
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/remera_negra_dama_ml_U.png" alt="">
             <div class="div-prod">
@@ -163,9 +165,9 @@
         </div>
 
         <div class="div-prod-completo">
-            <img class="indumentaria_imagen" src="imagenes_logo/musculosa_dama_blanca.png" alt="">
+            <img class="indumentaria_imagen" src="imagenes_logo/musculosa_hombre.png" alt="">
             <div class="div-prod">
-                <label class="indumentaria_desc">Producto: </label><span class="product">Musculosa Dama (Blanca)</span>
+                <label class="indumentaria_desc">Producto: </label><span class="product">Musculosa (Negra)</span>
             </div>
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
@@ -178,12 +180,12 @@
                 </select>
             </div>
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
-            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$800</span></div>
+            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$600</span></div>
             
             <!--<button class="btn_compra" id="btn_compra2">Comprar</button>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
-
+<!--
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/musculosa_dama_gris.png" alt="">
             <div class="div-prod">
@@ -202,7 +204,51 @@
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$800</span></div>
             
+           
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+    -->
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/musculosa_dama_blanca.png" alt="">
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto: </label><span class="product">Musculosa Dama (Blanca)</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$600</span></div>
+            
             <!--<button class="btn_compra" id="btn_compra2">Comprar</button>-->
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+<!--
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/musculosa_dama_gris.png" alt="">
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto: </label><span class="product">Musculosa Dama (Gris)</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                </select>
+            </div>
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$800</span></div>
+            
+
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -224,10 +270,10 @@
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$800</span></div>
             
-            <!--<button class="btn_compra" id="btn_compra2">Comprar</button>-->
+
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
-
+    -->
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/musculosa_dama_negra.png" alt="">
             <div class="div-prod">
@@ -244,9 +290,55 @@
                 </select>
             </div>
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
-            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$800</span></div>
+            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$600</span></div>
             
             <!--<button class="btn_compra" id="btn_compra2">Comprar</button>-->
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/shortAG.png" alt="">
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto: </label><span class="product">Short</span>
+            </div>
+            <script>
+                function mostrarMedidas() {
+                    const showMedidas = document.querySelector(".medidas_img");
+                
+                    // Mostrar la imagen si está oculta
+                    if (showMedidas.style.display === "none" || showMedidas.style.display === "") {
+                        showMedidas.style.display = "flex"; // Mostrar la imagen
+                    } else {
+                        showMedidas.style.display = "none"; // Ocultar la imagen
+                    }
+                }
+                
+                // Escuchar clics fuera del cuadro
+                document.addEventListener('click', function(event) {
+                    const showMedidas = document.querySelector(".medidas_img");
+                    const medidaLink = document.getElementById("mostrar_medidas");
+                
+                    // Si el clic ocurre fuera del cuadro de medidas y fuera del enlace
+                    if (!showMedidas.contains(event.target) && event.target !== medidaLink) {
+                        showMedidas.style.display = "none"; // Ocultar la imagen
+                    }
+                });
+              
+            </script>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label> 
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+                </select><span class="btn-medidas" id="mostrar_medidas" onclick="mostrarMedidas()">Medidas de Talles</span>
+            </div>
+            <div><img class="medidas_img" src="imagenes_logo/tallesShort.png" alt=""></div>
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$750</span></div>
+            
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
         
@@ -267,11 +359,10 @@
             </div>
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$1000</span></div>
-            <!--<button class="btn_compra" id="checkout-btn">Comprar</button>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
 
         </div>
-
+<!--
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/pantalon_cargo.png" alt="">
             <div class="div-prod">
@@ -289,7 +380,6 @@
             </div>
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$1000</span></div>
-            <!--<button class="btn_compra" id="checkout-btn">Comprar</button>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -310,11 +400,10 @@
             </div>
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio: </label><span class="costo">$1000</span></div>
-            <!--<button class="btn_compra" id="checkout-btn">Comprar</button>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
 
         </div>
-
+-->
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/remera_pantalon.png" alt="">
             <div class="div-prod">
@@ -353,10 +442,9 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1200</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
-
+<!--
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/himalaya_militar.png" alt="" >
             <div class="div-prod">
@@ -375,7 +463,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1200</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -397,7 +484,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1200</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -419,7 +505,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1200</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -441,7 +526,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1100</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -463,12 +547,11 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1100</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
         <div class="div-prod-completo">
-            <img class="indumentaria_imagen" src="imagenes_logo/alpes_negra_dama" alt="" >
+            <img class="indumentaria_imagen" src="imagenes_logo/alpesNegraDama.png" alt="" >
             <div class="div-prod">
                 <label class="indumentaria_desc">Producto: </label><span class="product">Campera Alpes Dama (Negra)</span>
             </div>
@@ -485,7 +568,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1100</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -507,7 +589,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1100</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -529,7 +610,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$825</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -551,7 +631,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$825</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -573,7 +652,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$825</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -595,7 +673,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1615</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -617,7 +694,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1615</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -639,10 +715,9 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1615</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
-
+-->
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/buzo_polar.png" alt="" >
             <div class="div-prod">
@@ -661,7 +736,6 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$925</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -683,10 +757,9 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$925</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
-
+<!--
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/lluvia_negro2.jpg" alt="" >
             <div class="div-prod">
@@ -705,10 +778,9 @@
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1025</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
-
+-->
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/gorro_lana.png" alt="" >
             <div class="div-prod">
@@ -717,17 +789,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$300</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -739,17 +806,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$300</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -761,17 +823,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$580</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -783,17 +840,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$580</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -805,17 +857,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$580</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -827,17 +874,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$580</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -849,17 +891,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$580</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -871,17 +908,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$300</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -893,17 +925,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$300</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -915,17 +942,12 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$300</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -937,17 +959,15 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
-                </select>
+                    <option value="10oz">10oz</option>
+                    <option value="12oz">12oz</option>
+                    <option value="14oz">14oz</option>
+                    <option value="16oz">16oz</option>
+                    </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$2250</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -959,17 +979,15 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
-                </select>
+                    <option value="10oz">10oz</option>
+                    <option value="12oz">12oz</option>
+                    <option value="14oz">14oz</option>
+                    <option value="16oz">16oz</option>
+                    </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$2250</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -981,17 +999,15 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
-                </select>
+                    <option value="10oz">10oz</option>
+                    <option value="12oz">12oz</option>
+                    <option value="14oz">14oz</option>
+                    <option value="16oz">16oz</option>
+                    </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$2250</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -1003,17 +1019,15 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
-                </select>
+                    <option value="10oz">10oz</option>
+                    <option value="12oz">12oz</option>
+                    <option value="14oz">14oz</option>
+                    <option value="16oz">16oz</option>
+                    </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1750</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -1025,39 +1039,147 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+                <option value="10oz">10oz</option>
+                <option value="12oz">12oz</option>
+                <option value="14oz">14oz</option>
+                <option value="16oz">16oz</option>
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1750</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/guantes_inv_gold.jpg" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Guantes Boxeo Invictus Gold</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="10oz">10oz</option>
+                <option value="12oz">12oz</option>
+                <option value="14oz">14oz</option>
+                <option value="16oz">16oz</option>
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1750</span></div>
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/gunates_inv_red.jpg" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Guantes Boxeo Invictus Rojo</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="10oz">10oz</option>
+                <option value="12oz">12oz</option>
+                <option value="14oz">14oz</option>
+                <option value="16oz">16oz</option>
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1750</span></div>
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/gunates_inv_blue.jpg" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Guantes Boxeo Invictus Azul</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="10oz">10oz</option>
+                <option value="12oz">12oz</option>
+                <option value="14oz">14oz</option>
+                <option value="16oz">16oz</option>
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1750</span></div>
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="imagenes_logo/tibiales_sanz_azules.webp" alt="" >
             <div class="div-prod">
-                <label class="indumentaria_desc">Producto:</label> <span class="product">Tibiales Sanz</span>
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Tibiales Sanz Azul</span>
             </div>
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
                 <option value="S">S</option>
-                <option value="M">M</option>
                 <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$2990</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/tibiales_inv_black.jpg" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Tibiales Invictus Negro</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="L">L</option>
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1800</span></div>
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/tibiales_inv_red.jpg" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Tibiales Invictus Rojo</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="L">L</option>
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1800</span></div>
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/tibiales_inv_blue.jpg" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Tibiales Invictus Azul</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                <option value="S">S</option>
+                <option value="L">L</option>
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$1800</span></div>
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -1069,17 +1191,11 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$270</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -1091,17 +1207,13 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+                    <option value="M">3mts</option>
+                    <option value="L">5mts</option>
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$320</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -1113,17 +1225,13 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+                    <option value="M">3mts</option>
+                    <option value="L">5mts</option>
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$320</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -1135,17 +1243,13 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+                    <option value="M">3mts</option>
+                    <option value="L">5mts</option>
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$320</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
 
@@ -1157,19 +1261,33 @@
             <div class="talle-contenedor">
                 <label for="talle">Talle:</label>
                 <select class="talle" name="talle">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
+                <option value="M">3mts</option>
+                <option value="L">5mts</option>
                 </select>
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
             <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$320</span></div>
-            <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
             <button type="button" class="btn-agregar">Agregar al carrito</button>
         </div>
+<!--
+        <div class="div-prod-completo">
+            <img class="indumentaria_imagen" src="imagenes_logo/MT-BOTAC5501-Pantalla-550x550.jpg" alt="" >
+            <div class="div-prod">
+                <label class="indumentaria_desc">Producto:</label> <span class="product">Botella con Visor</span>
+            </div>
+            <div class="talle-contenedor">
+                <label for="talle">Talle:</label>
+                <select class="talle" name="talle">
+                
+                </select>
+            </div>
+            
+            <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$550</span></div>
+            <button type="button" class="btn-agregar">Agregar al carrito</button>
+        </div>
+
 
         <div class="div-prod-completo">
             <img class="indumentaria_imagen" src="" alt="" >
@@ -1188,11 +1306,11 @@
             </div>
             
             <label class="div-prod">Cantidad: <input type="number" class="producto" name="producto" min="1" step="1" value="1"></label>
-            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo">$300</span></div>
-                <!--<button class="btn_compra" id="btn_compra1">Comprar</button><br>-->
+            <div class="div-prod"><label class="indumentaria_desc">Precio:</label> <span class="costo"></span></div>
                 <button type="button" class="btn-agregar">Agregar al carrito</button>
             </div>
         </div>
+        -->
         <footer id="footer-tienda">
             <span>
                 &copy; 2024 AG Krav Maga - Montevideo, Uruguay. Todos los derechos reservados. 

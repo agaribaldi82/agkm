@@ -70,13 +70,14 @@ const Modal = ({ isOpen, onClose, children }) => {
                     telefono: ''
                 });
     
-                const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
+                const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes','Sabado'];
                 const horarios = {
-                    'Lunes': ['11:00 a 12:00', '20:30 a 21:30'],
-                    'Martes': ['20:30 a 21:30'],
+                    'Lunes': ['20:30 a 21:30'],
+                    'Martes': ['10:00 a 11:00', '20:30 a 21:30'],
                     'Miércoles': ['20:30 a 21:30'],
-                    'Jueves': ['11:00 a 12:00', '20:30 a 21:30'],
-                    'Viernes': ['20:30 a 21:30']
+                    'Jueves': ['10:00 a 11:00', '20:30 a 21:30'],
+                    'Viernes': ['20:30 a 21:30'],
+                    'Sabado' : ['Mujeres 14:00 a 16:00']
                 };
     
                 const seleccionarClase = (dia, horario) => {
@@ -335,9 +336,10 @@ const Modal = ({ isOpen, onClose, children }) => {
                 </div>
                 <div>
                     <p>
-                        Mi nombre es Adrián Garibaldi,<img class= "foto_diploma" img src="imagenes_logo/foto_diploma.jpg" alt="Altos de Golan, Israel" title="Mi diploma de Experto - Israel 2019"> comencé a entrenar Krav Maga en el año 2009 mientras trabajaba en la Armada Nacional. En el año 2013 me uní a la familia KMG alcanzando el nivel “Graduado 1”, ocupando el puesto de "Director Regional." 
-                        En el año 2016 comencé a dar instrucción de Defensa Personal en el Batallón de Infantería Paracaidista Nro 14 Fuerzas Especiales (Compañía Comandos y Escorpión Contraterrorista) donde cesé actividad debido a la pandemia. <br>
-                        Durante todo este tiempo me mantuve capacitándome constantemente entrenando con los más altos exponentes del Krav Maga pricipalmente Eyal Yanilov ( mi instructor y referente) quien en Junio de 2019 me evaluó en mi examen donde pasé satisfactoriamente al grado Experto 1 en Altos de Golan, Israel. 
+                        Mi nombre es Adrián Garibaldi,<img class= "foto_diploma" img src="imagenes_logo/foto_diploma.jpg" alt="Altos de Golan, Israel" title="Mi diploma de Experto - Israel 2019"> en el año 2008 luego de estar varios años viviendo en USA recibí un impacto de bala por parte de dos delincuentes. Al recuperarme entendí que todo el entrenamiento que tenía en diferentes deportes de contacto y artes marciales no eran suficientes, faltaban herramientas contra situaciones violentas de la vida cotidiana que todos estamos expuestos a cada rato, uno siempre suele pensar "a mí no me va a pasar nada"...yo era uno de ellos. Comencé a entrenar Krav Maga en el año 2009 mientras trabajaba en la Armada Nacional. 
+                        En el año 2013 me gradué de Instructor alcanzando el grado “Graduado 1”, comenzando así mi carrera con un grupo de alumnos en Montevideo. 
+                        En el año 2016 comencé a dar instrucción de Defensa Personal en el Batallón de Infantería Paracaidista Nro 14 Fuerzas Especiales (Compañía Comandos y Escorpión Contraterrorista) donde cesé actividad debido a la pandemia. También fui instructor de la materia OMTU (Operaciones Militares en Terreno Urbano) en la Escuela Militar (Toledo - Canelones), y brindé clases especiales en la Policía Federal de BsAs, Policía de Investigaciones Zona 3, entre otros. <br>
+                        Durante todo este tiempo me mantuve capacitándome constantemente entrenando con los más altos exponentes del Krav Maga alcanzando en Junio de 2019 el grado Experto 1 en Altos de Golan, Israel. 
                     </p>
                 </div>
             </section>
@@ -353,15 +355,25 @@ const Modal = ({ isOpen, onClose, children }) => {
             </p>
     
             <div id="cartel_horarios">
-                <img id="horarios" src="imagenes_logo/TE ESTAMOS BUSCANDO.png" alt="Nuestros Horarios" title="Horarios de clase">
+                <img id="horarios" src="imagenes_logo/horarios2025F.png" alt="Nuestros Horarios" title="Horarios de clase">
+                <img id="horarios" src="imagenes_logo/costos2025F.png" alt="Nuestros Horarios" title="Horarios de clase">
             </div>
         </section>
         <section>
             <div>
                 <h2 id="novedades">Novedades</h2>
-                <img class="foto_seminario" src="imagenes_logo/mudanza.png" alt="">
+                <img class="foto_seminario" src="imagenes_logo/kidsAfiche.png" alt="seminario_vehiculo" title="Seminario vehiculo">
                 <hr id="linea_divisoria">
-                <img class="foto_seminario" src="imagenes_logo/volante.png" alt="">
+                <img class="foto_seminario" src="imagenes_logo/mujeresAfiche.png" alt="seminario_vehiculo" title="Seminario vehiculo">
+                <hr id="linea_divisoria">
+                <img class="foto_seminario" src="imagenes_logo/Seminarios.png" alt="seminario_vehiculo" title="Seminario vehiculo">
+                <p id="inscripciones">INSCRIPCIONES ABIERTAS PARA TODOS LOS SEMINARIOS Y CURSOS</p>
+                <hr id="linea_divisoria">
+                <img class="foto_seminario" src="imagenes_logo/basico.png" alt="seminario_vehiculo" title="Seminario vehiculo">
+                <hr id="linea_divisoria">
+                <img class="foto_seminario" src="imagenes_logo/defensivo.png" alt="seminario_vehiculo" title="Seminario vehiculo">
+                <hr id="linea_divisoria">
+                <img class="foto_seminario" src="imagenes_logo/vip.png" alt="seminario_vehiculo" title="Seminario vehiculo">
                 <hr id="linea_divisoria">
                 <p id="seminario">SEMINARIO</p>
                 <img class="foto_seminario" src="imagenes_logo/seminario_vehiculo.png" alt="seminario_vehiculo" title="Seminario vehiculo">
@@ -406,12 +418,10 @@ const Modal = ({ isOpen, onClose, children }) => {
                 Como llegar:
             </h2 >
             <p id="direccion">
-                Av. Italia 4460
-                Esquina Atlántico -
-                Malvín
+                Comercio 2082 Esquina Lombardini
             </p>
             <div id="mapa">
-                <iframe class="mapa_1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.749351481681!2d-56.115511360748876!3d-34.88763987265957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f86d33dbbb48f%3A0x62a9fa28da6dda08!2sAv.%20Italia%204460%2C%2011400%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1714512610630!5m2!1ses!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.913981447484!2d-56.13643362505814!3d-34.88350627285526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80de62fe6f21%3A0x832a3beac8776a30!2sComercio%202082%2C%2011400%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses!2suy!4v1739803904589!5m2!1ses!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div id="footer">
                 <span>

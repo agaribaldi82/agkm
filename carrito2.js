@@ -136,14 +136,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 icon: "error"
             });
         }
- 
+
+  
 
         // Enviar el email usando EmailJS
         emailjs.send('service_z20cmq6', 'template_v4j0raz', contenidoEmail)
             .then(response => {
                 Swal.fire({
-                    title: `Gracias por tu compra ${nombre}!`,
-                    text: "Acabo de enviarte un email para que finalices tu compra.",
+                    title: `¡Gracias por tu compra, ${nombre}!`,
+                    html: `Para finalizar tu compra, debes abonar los productos seleccionados a través de giro bancario.<br><br>` +
+                          `<strong>Cuenta Scotiabank - Caja de Ahorros</strong><br>` +
+                          `Sucursal: 72<br>` +
+                          `Número de cuenta: 92812070<br>` +
+                          `Titular: Adrian Garibaldi<br><br>` +
+                          `Una vez realizado el pago, tus productos serán agregados a la próxima tanda de producción. ` +
+                          `En el caso de protecciones como tibiales, bucal, guantes y vendas, se entregan los viernes.`,
                     icon: "success"
                 });
                 vaciarCarrito();

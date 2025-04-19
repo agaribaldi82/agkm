@@ -24,6 +24,35 @@ header {
     background-color: rgba(255, 0, 0, 0.562);
 }
 
+.medidas_img {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.btn-medidas {
+    margin-left: .5rem;
+    background-color: rgba(0, 128, 0, 0.671);
+    padding: .2rem;
+    border-radius: .5rem;
+    box-shadow: .1rem .1rem .5rem orange;
+}
+
+.btn-medidas:hover {
+    background-color: orange;
+    box-shadow: .1rem .1rem .5rem rgba(0, 128, 0, 0.671);
+}
+
+#mostrar_medidas {
+    cursor: pointer;
+}
+
+
 .submit{
     border-radius: .5rem;
     margin-top: 1rem;
@@ -46,7 +75,7 @@ body {
     color: white;
     text-align: center;
     margin: auto;
-    width: 100%;
+    max-width: 100%;
     height: auto;
     padding: 0;
 }
@@ -222,9 +251,9 @@ input{
 }
 
 @keyframes galery_portada{
-    0%{background-image: url(imagenes_logo/clase1.jpg);}
-    20%{background-image: url(imagenes_logo/clase3.jpg);}
-    40%{background-image: url(imagenes_logo/clase6.jpg);}
+    0%{background-image: url(imagenes_logo/tiro3.jpg);}
+    20%{background-image: url(imagenes_logo/tiro6.jpg);}
+    40%{background-image: url(imagenes_logo/grupo2.jpg);}
     60%{background-image: url(imagenes_logo/clase7.jpg);}
     80%{background-image: url(imagenes_logo/portada.png);}
     100%{background-image: url(imagenes_logo/clase9.jpg);}
@@ -357,6 +386,9 @@ h3 {color: silver;
 }
 
 #cartel_horarios{
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
     text-align: center;
     margin-top: 5rem;
     margin-bottom: 70px;
@@ -496,7 +528,7 @@ link:hover{
 }
 
 #horarios{
-    width: 60%;
+    width: 35%;
     text-align: center;
 }
 
@@ -655,7 +687,7 @@ button:hover{
     color: #f8960c;
 }
 .foto_seminario{
-    width: 60%;
+    width: 40%;
 }
 #seccion_venta{
     display: flex;
@@ -1012,7 +1044,7 @@ form input {
     width: 100%;
     position: relative;
     padding: .5rem;
-    background-color: rgba(255, 94, 0, 0.39);
+    background-color: rgba(255, 72, 0, 0.616);
 }
 .botones-carrito {
     display: flex;
@@ -1240,6 +1272,8 @@ form input {
         width: 150%;
     }
     #cartel_horarios{
+        display: flex;
+        flex-direction: column;
         width: 100%;
     }
     #horarios{
@@ -1320,5 +1354,8 @@ form input {
     }
     .cerrarForm{
         margin-left: 4.5rem;
+    }
+    .medidas_img {
+        top: 30%;
     }
 }
