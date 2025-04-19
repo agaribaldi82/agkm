@@ -73,11 +73,11 @@ const Modal = ({ isOpen, onClose, children }) => {
                 const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes','Sabado'];
                 const horarios = {
                     'Lunes': ['20:30 a 21:30'],
-                    'Martes': ['10:00 a 11:00', '20:30 a 21:30'],
+                    'Martes': ['10:00 a 11:00', 'Niños - 1830 a 1930hs', '20:30 a 21:30'],
                     'Miércoles': ['20:30 a 21:30'],
-                    'Jueves': ['10:00 a 11:00', '20:30 a 21:30'],
+                    'Jueves': ['10:00 a 11:00', 'Niños -      1830 a 1930hs', '20:30 a 21:30'],
                     'Viernes': ['20:30 a 21:30'],
-                    'Sabado' : ['Mujeres 14:00 a 16:00']
+                    'Sabado' : ['Mujeres - 14:00 a 16:00']
                 };
     
                 const seleccionarClase = (dia, horario) => {
@@ -153,23 +153,39 @@ const Modal = ({ isOpen, onClose, children }) => {
                         
                         />
                         <h2 className="titulo">Reserva tu Clase de Prueba</h2>
+                        <h3> Clase Adultos Mixta</h3>
                         <div className="contenedor">
                             {diasSemana.map((dia) => (
                                 <div key={dia} className="dia">
                                     <h3>{dia}</h3>
                                     <div>
-                                        {horarios[dia].map((horario) => (
-                                            <button
+                                        {horarios[dia].map((horario) => {
+                                            const [titulo, hora] = horario.split(' - ');
+                                            return (
+                                                <button
                                                 key={`${dia}-${horario}`}
                                                 onClick={() => seleccionarClase(dia, horario)}
-                                                className={reservas[`${dia}-${horario}`] ? 'reservado' : ''}
+                                                className={`${reservas[`${dia}-${horario}`] ? 'reservado' : ''} 
+                        ${titulo === 'Mujeres' ? 'boton-mujeres' : ''} 
+                        ${titulo === 'Niños' ? 'boton-ninos' : ''}`}
                                             >
-                                                {horario}
-                                            </button>
-                                        ))}
+                                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                                        {hora ? (
+                                                            <>
+                                                                <span style={{ fontWeight: 'bold' }}>{titulo}</span>
+                                                                <span>{hora}</span>
+                                                            </>
+                                                        ) : (
+                                                            <span>{titulo}</span>
+                                                        )}
+                                                    </div>
+                                                </button>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             ))}
+                            
                         </div>
                         
                         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>

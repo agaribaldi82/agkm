@@ -119,6 +119,36 @@ a, #log{
     margin-top: 0;
 }
 
+.boton-mujeres {
+    background-color: #8A2BE2; /* Violeta */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 5px 10px; /* Ajusta el padding a tu gusto */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: .8rem; /* Ajusta el tamaño de la fuente */
+    cursor: pointer; /* Mano al pasar el cursor */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.boton-mujeres:hover {
+    background-color: #0dad22; /* Violeta más oscuro cuando pasa el cursor */
+}
+
+.boton-ninos {
+    background-color: #28a745; /* Verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 5px 10px; /* Ajusta el padding a tu gusto */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: .8rem; /* Ajusta el tamaño de la fuente */
+    cursor: pointer; /* Mano al pasar el cursor */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.boton-ninos:hover {
+    background-color: #03440e; /* Verde más oscuro cuando pasa el cursor */
+}
+
 #enviar2{
     background-color: #F8680C;
     color: white;
@@ -604,6 +634,9 @@ h2.carrito {
     left: 0;
     cursor: pointer;
     
+}
+#cerrar {
+    cursor: pointer;
 }
 .formulario-carro form {
     width: fit-content;
@@ -1239,7 +1272,7 @@ form input {
     }
     #nav a, #log{
         display: flex;
-        background-color: rgba(248, 126, 4, 0.582);
+        background: linear-gradient(to right, rgba(248, 126, 4, 0.959), rgba(7, 7, 7, 0.8));
         padding: 1rem;
         width: 10rem;
         border-radius: .5rem;
@@ -1247,6 +1280,7 @@ form input {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.1rem;
     }
+    
 
     #nav{
         display: inline-block;
