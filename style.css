@@ -249,6 +249,7 @@ form h2{
     height: 55vw;
     margin: auto;
     align-content: center;
+    justify-content: center;
     border-radius: 1rem;
     margin-top: 5rem;
     display:flex ;
@@ -293,6 +294,11 @@ input{
     width: 250px;
     float: left;
     margin-right: 10px;
+}
+
+#contacto_form input {
+    width: 78%;
+    margin-left: 5rem;
 }
 /*
 .nota_espectador{
@@ -446,10 +452,8 @@ button {
 }
 
 a.chatea{
-    background-color: #d36f129f;
-    padding: 3rem;
-    margin: auto;
-    margin-left: 2rem;
+    background-color: #d328129f;
+    padding: .5rem;
     box-shadow: .2rem .2rem .1rem rgba(253, 252, 252, 0.479);
 }
 .chatea:hover{
@@ -472,7 +476,9 @@ a.chatea{
 }
 
 .contact-container{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
 
 }
 
@@ -1298,6 +1304,9 @@ form input {
         margin: auto;
         margin-left: 0;
     }
+    #mapa iframe {
+        width: 100%;
+    }
     .mapa_1{
         width: 80vw;
         margin-bottom: 3rem;
@@ -1318,7 +1327,9 @@ form input {
     }
 
     .contact-container{
-        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .videos{
