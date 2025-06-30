@@ -8,3 +8,4 @@ function abrirReserva() {
     let btn_res = document.querySelector(".btn-reserva").style.display = "none"   
 
 }
+
